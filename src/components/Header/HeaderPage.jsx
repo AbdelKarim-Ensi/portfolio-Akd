@@ -73,4 +73,4 @@ const HeaderPage = () => {
     )
 }
 
-export default React.memo(HeaderPage);
+export default React.memo(Header);

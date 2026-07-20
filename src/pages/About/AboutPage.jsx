@@ -6,7 +6,7 @@ import HeaderPage from '../../components/Header/HeaderPage';
 import Footer from '../../components/Footer/Footer';
 import ParticleBackground from "../../components/ParticlesBg/ParticleBackground";
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
-import cv from '../../cv/cv.pdf';
+import cv from '../../cv/CV.pdf';
 
 /* Multi idioma */
 import { FormattedMessage } from 'react-intl';
