@@ -1,0 +1,224 @@
+.fav-projects {
+  background-color: var(--bg-color, #030712);
+  color: var(--light-color, #9ca3af);
+  padding: 8rem 8%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fav-projects__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.fav-projects__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4.8rem;
+  gap: 2.4rem;
+}
+
+.fav-projects__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--heading-color, #ffffff);
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: none;
+}
+
+.fav-projects__line {
+  height: 3px;
+  flex-grow: 1;
+  border-radius: 9999px;
+  background: linear-gradient(to right, var(--green), var(--secundario));
+}
+
+.fav-projects__nav {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.fav-projects__nav-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 254, 0.3);
+  background: transparent;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fav-projects__nav-btn:hover:not(:disabled) {
+  background: rgba(0, 229, 254, 0.1);
+  border-color: var(--green);
+}
+
+.fav-projects__nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* CARROUSEL TRACK */
+.fav-projects__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 3.2rem) / 3);
+  gap: 3.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fav-projects__track::-webkit-scrollbar {
+  display: none;
+}
+
+.fav-card {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.fav-card__img-wrapper {
+  position: relative;
+  border-radius: 1.6rem;
+  border: 1px solid var(--card-border, #1e293b);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  height: 30rem;
+  width: 100%;
+  background: var(--card-bg, #0f172a);
+  transition: border-color 0.3s ease;
+}
+
+.fav-card:hover .fav-card__img-wrapper {
+  border-color: var(--green);
+}
+
+.fav-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.fav-card:hover .fav-card__img {
+  transform: scale(1.03);
+}
+
+.fav-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.fav-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--heading-color, #ffffff);
+  letter-spacing: 0.01em;
+  margin: 0;
+  text-transform: none;
+}
+
+.fav-card__links {
+  display: flex;
+  gap: 1.2rem;
+  color: var(--green);
+  padding-top: 0.4rem;
+}
+
+.fav-card__links a {
+  color: inherit;
+  display: flex;
+  transition: color 0.2s ease;
+}
+
+.fav-card__links a:hover {
+  color: var(--terciario);
+}
+
+.fav-card__desc {
+  font-size: 1.4rem;
+  color: var(--light-color, #94a3b8);
+  margin: 0.8rem 0 1.6rem 0;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+.fav-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.fav-card__tag {
+  padding: 0.6rem 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  background: var(--tag-bg, #1e2536);
+  color: var(--tag-color, #e2e8f0);
+  text-transform: none;
+}
+
+/* THEME CLAIR */
+body:not(.dark) .fav-projects {
+  --bg-color: #f4f6fa;
+  --heading-color: #121f41;
+  --card-border: #dbe1ea;
+  --card-bg: #ffffff;
+  --tag-bg: #eef1f6;
+  --tag-color: #121f41;
+}
+
+/* THEME SOMBRE */
+body.dark .fav-projects {
+  --bg-color: #030712;
+  --heading-color: #ffffff;
+  --card-border: #1e293b;
+  --card-bg: #0f172a;
+  --tag-bg: #1e2536;
+  --tag-color: #e2e8f0;
+}
+
+@media (max-width: 990px) {
+  .fav-projects__header {
+    flex-wrap: wrap;
+  }
+  .fav-projects__title {
+    font-size: 2.8rem;
+    white-space: normal;
+  }
+  .fav-projects__line {
+    display: none;
+  }
+  .fav-projects__track {
+    grid-auto-columns: calc((100% - 2rem));
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 991px) {
+  .fav-projects__track {
+    grid-auto-columns: calc((100% - 2 * 2rem) / 2);
+  }
+}

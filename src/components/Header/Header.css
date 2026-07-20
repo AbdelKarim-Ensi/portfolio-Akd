@@ -15,7 +15,7 @@
 
 .site-header .logo {
   font-family: "Bebas Neue", cursive;
-  font-size: 2.6rem;
+  font-size: 3.4rem;
   color: rgb(231, 13, 13);
 }
 
@@ -49,6 +49,85 @@
 .navbar img {
   width: 30px;
   cursor: pointer;
+}
+.animated-name span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: letterDrop 0.5s ease forwards;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+@keyframes letterDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-name span:hover {
+  animation: letterJump 0.5s ease;
+  color: var(--hover-color) !important;
+}
+
+@keyframes letterJump {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-14px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.animated-name span:hover {
+  animation: letterJump 0.5s ease;
+  color: var(--hover-color) !important;
+}
+
+@keyframes letterJump {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-14px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Le vrai effet de saut au survol */
+.animated-name span:hover {
+  animation: letterJump 0.5s ease;
+  color: var(--green);
+}
+
+@keyframes letterJump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-14px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Effet bonus au survol : chaque lettre bouge légèrement */
+.animated-name span:hover {
+  color: var(--green);
+  transform: translateY(-5px);
+  transition: 0.2s ease;
 }
 
 .navbar a::before {

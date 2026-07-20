@@ -45,21 +45,6 @@ const Service = () => (
                     />
                 </p>
             </div>
-            <div className="columns" data-aos="fade-up" data-aos-delay="400">
-                <i className="fas fa-chart-line"></i>
-                <h3>
-                    <FormattedMessage
-                        id='marketing'
-                        defaultMessage='Digital marketing'
-                    />
-                </h3>
-                <p>
-                    <FormattedMessage
-                        id='marketing-info'
-                        defaultMessage='Complete maintenance of web pages to detect and solve errors, update content whether text, photos, web design elements, add new functions, etc.'
-                    />
-                </p>
-            </div>
             <div className="columns" data-aos="fade-up" data-aos-delay="500">
                 <i className="fas fa-wrench"></i>
                 <h3>
@@ -75,21 +60,7 @@ const Service = () => (
                     />
                 </p>
             </div>
-            <div className="columns" data-aos="fade-up" data-aos-delay="600">
-                <i className="fas fa-search"></i>
-                <h3>
-                    <FormattedMessage
-                        id='seo'
-                        defaultMessage='Web positioning (SEO)'
-                    />
-                </h3>
-                <p>
-                    <FormattedMessage
-                        id='seo-info'
-                        defaultMessage='Web positioning through SEO, so your website appears in the main search results according to your business, both in Google, Bing, or other internet search engines'
-                    />
-                </p>
-            </div>
+            
             <div className="columns" data-aos="fade-up" data-aos-delay="700">
                 <i className="fas fa-tachometer-alt"></i>
                 <h3>
@@ -106,11 +77,7 @@ const Service = () => (
                 </p>
             </div>
         </div>
-        <div className='portafolio-btn'>
-            <Link to="/service">
-                <ButtomGet/>
-            </Link>
-        </div>
+        
     </section>
 );
 

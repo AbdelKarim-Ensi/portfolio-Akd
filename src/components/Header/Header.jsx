@@ -16,6 +16,7 @@ import { langContext } from '../../context/Context';
 const Header = () => {
     // Buttom language
     const idioma = useContext(langContext);
+    const letterColors = ['#00e5fe', '#ff4d4d', '#ffd93d', '#6bff6b', '#ff8c42', '#c77dff', '#ff5ecb', '#4dd0e1'];
     // Menu desplegable
     const menuDesplegable = () => {
         let navbar = document.querySelector('.navbar');
@@ -34,9 +35,21 @@ const Header = () => {
         <header className="site-header">
             <div id="menu-btn" className="fas fa-bars" onClick={menuDesplegable}></div>
 
-            <NavLink className="logo" to="/">
-                <p>=(<span>NAHUEL61920</span>)=></p>
-            </NavLink>
+           <NavLink className="logo" to="/">
+    <p className="animated-name">
+        {"AbdelKarim Doduey".split("").map((letter, index) => (
+            <span
+                key={index}
+                style={{
+                    animationDelay: `${index * 0.08}s`,
+                    '--hover-color': letterColors[index % letterColors.length]
+                }}
+            >
+                {letter === " " ? "\u00A0" : letter}
+            </span>
+        ))}
+    </p>
+</NavLink>
 
             <nav className="navbar">
                 <Link to="inicio" spy={true} offset={-150} href="#inicio">
@@ -69,10 +82,10 @@ const Header = () => {
                         defaultMessage='Contact'
                     />
                 </Link>
-                <div id="buttons">
-                    <img onClick={() => idioma.selectLanguage('en-US')} src="https://nahuel61920.github.io/Portafoliovirtual/img/en.png" alt="EEUU" />
-                    <img onClick={() => idioma.selectLanguage('es-ES')} src="https://nahuel61920.github.io/Portafoliovirtual/img/es.png" alt="España" />
-                </div>
+               <div id="buttons">
+    <img onClick={() => idioma.selectLanguage('en-US')} src="https://flagcdn.com/w40/us.png" alt="USA" />
+    <img onClick={() => idioma.selectLanguage('fr-FR')} src="https://flagcdn.com/w40/fr.png" alt="France" />
+</div>
             </nav>
             <div className="switch" id="switch">
                 <DarkMode />

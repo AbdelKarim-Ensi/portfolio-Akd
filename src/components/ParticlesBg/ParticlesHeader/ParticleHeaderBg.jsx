@@ -140,7 +140,16 @@ export default function ParticleHeaderBg() {
               star: {
                 sides: 5,
               },
-              image: [
+              image: [{
+  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+  width: 20,
+  height: 20,
+},
+{
+  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  width: 20,
+  height: 20,
+},
                 {
                   src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
                   width: 20,
@@ -156,11 +165,7 @@ export default function ParticleHeaderBg() {
                   width: 20,
                   height: 20,
                 },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
+               
                 {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
                   width: 20,
@@ -186,11 +191,7 @@ export default function ParticleHeaderBg() {
                   width: 20,
                   height: 20,
                 },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-                  width: 20,
-                  height: 20,
-                },
+      
                 {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
                   width: 20,
@@ -201,11 +202,7 @@ export default function ParticleHeaderBg() {
                   width: 20,
                   height: 20,
                 },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-                  width: 20,
-                  height: 20,
-                },
+      
               ],
               images: [
                 {
@@ -223,11 +220,7 @@ export default function ParticleHeaderBg() {
                   width: 20,
                   height: 20,
                 },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
+               
                 {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
                   width: 20,
@@ -253,11 +246,7 @@ export default function ParticleHeaderBg() {
                   width: 20,
                   height: 20,
                 },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-                  width: 20,
-                  height: 20,
-                },
+               
                 {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
                   width: 20,
@@ -269,10 +258,16 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-                  width: 20,
-                  height: 20,
-                },
+  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+  width: 20,
+  height: 20,
+},
+{
+  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  width: 20,
+  height: 20,
+},
+                
               ],
             },
             type: "image",

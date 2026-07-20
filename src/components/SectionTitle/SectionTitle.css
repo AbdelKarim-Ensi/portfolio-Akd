@@ -1,0 +1,23 @@
+.section-title-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 1.25rem;
+}
+
+.section-title {
+  font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  padding-top: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    text-align: left;
+    padding-top: 0;
+  }
+}

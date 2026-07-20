@@ -1,299 +1,176 @@
-import React from 'react';
-import '../../pages/Project/ProjectPage.css'
-import { Link } from 'react-router-dom';
-import { ButtomGet } from '../ButtomGet/ButtomGet';
+import React, { useRef, useState, useEffect } from "react";
+import "./Project.css";
+import projects from "../../data/projects";
 
-/* Multi idioma */
-import { FormattedMessage } from 'react-intl';
+const ExternalIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 3h6v6" />
+    <path d="M10 14 21 3" />
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+  </svg>
+);
 
-/* Swiper */
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+const GithubIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
 
-/* Img */
-const proyectImg = require.context('../../img', true);
+const ArrowLeftIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m15 18-6-6 6-6" />
+  </svg>
+);
+
+const ArrowRightIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m9 18 6-6-6-6" />
+  </svg>
+);
+
+const CARDS_PER_VIEW = 3;
 
 const Project = () => {
-    return (
-        <section className="proyectos" id="proyectos">
-            <h2 className="heading">
-                <FormattedMessage
-                    id='projects'
-                    defaultMessage='Projects'
-                />
-            </h2>
-            <div className="proyect-site" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <Swiper
-                    spaceBetween={30}
-                    loop={true}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Pagination, Autoplay]}
-                    breakpoints={{
-                        0: {
-                            slidesPerView: 1,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1024: {
-                            slidesPerView: 3,
-                        },
-                    }}
-                    className='proyectos-slider mySwiper'
-                >
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-app-18.png`)}
-                            alt='proyectos'
+  const trackRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-                        />
-                        <div className="content">
-                            <h3>CoinPlus</h3>
-                            <p>
-                                Trading platform for cryptocurrencies
-                            </p>
-                            <p className="tecnologias">
-                                React
-                                <span> -</span> CSS
-                                <span> -</span> Redux
-                                <span> -</span> Bootstrap
-                                <span> -</span> TypeScript
-                                <span> -</span> Solidity
-                                <span> -</span> NodeJS
-                                <span> -</span> MongoDB
-                            </p>
-                            <a href="https://coin-plus.vercel.app/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/CoinPlus" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-14.jpg`)}
-                            alt='proyectos'
+  const maxIndex = Math.max(0, projects.length - CARDS_PER_VIEW);
+  const canGoLeft = activeIndex > 0;
+  const canGoRight = activeIndex < maxIndex;
 
-                        />
-                        <div className="content">
-                            <h3>Justice</h3>
-                            <p>
-                                lawyers website
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                                <span> -</span> jQuery
-                                <span> -</span> Bootstrap
-                            </p>
-                            <a href="https://nahuel61920.github.io/Justice/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/Justice" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-app-17.png`)}
-                            alt='proyectos'
+  const scrollToIndex = (index) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.children[index];
+    if (!card) return;
+    track.scrollTo({
+      left: card.offsetLeft - track.offsetLeft,
+      behavior: "smooth",
+    });
+  };
 
-                        />
-                        <div className="content">
-                            <h3>PI Dogs</h3>
-                            <p>
-                                Individual Project
-                            </p>
-                            <p className="tecnologias">
-                                React
-                                <span> -</span> CSS
-                                <span> -</span> Redux
-                                <span> -</span> NodeJS
-                                <span> -</span> ExpressJS
-                                <span> -</span> Sequelize
-                                <span> -</span> PostgreSQL
-                            </p>
-                            <a href="https://pi-dogs-main-ashy.vercel.app/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/PI-DOGS-MAIN" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-7.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>Power Engine</h3>
-                            <p>
-                                Automobiles Website
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                            </p>
-                            <a href="https://nahuel61920.github.io/Power-Engine/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/Power-Engine" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-6.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>Spider-Man fan page</h3>
-                            <p>
-                                Fan page Spider-Man
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                                <span> -</span> Bootstrap
-                            </p>
-                            <a href="https://nahuel61920.github.io/Spider-Man/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/Spider-Man" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-12.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>EveryRunnig</h3>
-                            <p>
-                                Website shoes
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                                <span> -</span> Bootstrap
-                            </p>
-                            <a href="https://nahuel61920.github.io/EveryRunning/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/EveryRunning" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-5.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>Premier Food</h3>
-                            <p>
-                                Fast food
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                                <span> -</span> Sass
-                            </p>
-                            <a href="https://nahuel61920.github.io/PremierFood/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/PremierFood" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-8.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>ShopTec</h3>
-                            <p>
-                                Ecommerce
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> Sass
-                                <span> -</span> JavaScript
-                            </p>
-                            <a href="https://nahuel61920.github.io/shop-tec/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/shop-tec" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-10.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>Elegant Hand</h3>
-                            <p>
-                                Watch Shop
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                            </p>
-                            <a href="https://nahuel61920.github.io/ElegantHand/ " className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/ElegantHand" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-9.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>Vida en papel</h3>
-                            <p>
-                                Bookstore
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                            </p>
-                            <a href="https://nahuel61920.github.io/vida-en-papel/ " className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/vida-en-papel" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='caja'>
-                        <img
-                            src={proyectImg(`./proyecto-11.jpg`)}
-                            alt='proyectos'
-                        />
-                        <div className="content">
-                            <h3>Plus Anime</h3>
-                            <p>
-                                Anime website
-                            </p>
-                            <p className="tecnologias">
-                                HTML5
-                                <span> -</span> CSS
-                                <span> -</span> JavaScript
-                            </p>
-                            <a href="https://nahuel61920.github.io/PlusAnime/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
-                            <a href="https://github.com/Nahuel61920/PlusAnime" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-                <div className="swiper-pagination"></div>
+  const handlePrev = () => {
+    if (!canGoLeft) return;
+    const newIndex = Math.max(0, activeIndex - 1);
+    setActiveIndex(newIndex);
+    scrollToIndex(newIndex);
+  };
+
+  const handleNext = () => {
+    if (!canGoRight) return;
+    const newIndex = Math.min(maxIndex, activeIndex + 1);
+    setActiveIndex(newIndex);
+    scrollToIndex(newIndex);
+  };
+
+  // Garde activeIndex synchronisé si l'utilisateur scroll manuellement
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let timeout;
+    const handleScroll = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const children = Array.from(track.children);
+        let closest = 0;
+        let closestDist = Infinity;
+        children.forEach((child, i) => {
+          const dist = Math.abs(child.offsetLeft - track.offsetLeft - track.scrollLeft);
+          if (dist < closestDist) {
+            closestDist = dist;
+            closest = i;
+          }
+        });
+        setActiveIndex(closest);
+      }, 100);
+    };
+
+    track.addEventListener("scroll", handleScroll);
+    return () => {
+      track.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  return (
+    <section className="fav-projects">
+      <div className="fav-projects__container">
+
+        <div className="fav-projects__header">
+          <h2 className="fav-projects__title">
+            Here are a few of my favorite projects.
+          </h2>
+          <div className="fav-projects__line"></div>
+
+          {projects.length > CARDS_PER_VIEW && (
+            <div className="fav-projects__nav">
+              <button
+                type="button"
+                className="fav-projects__nav-btn"
+                onClick={handlePrev}
+                disabled={!canGoLeft}
+                aria-label="Projet précédent"
+              >
+                <ArrowLeftIcon />
+              </button>
+              <button
+                type="button"
+                className="fav-projects__nav-btn"
+                onClick={handleNext}
+                disabled={!canGoRight}
+                aria-label="Projet suivant"
+              >
+                <ArrowRightIcon />
+              </button>
             </div>
-            {/* <Link className="custom-btn btn-codigo portafolio-btn" to="/project">
-                <FormattedMessage
-                    id='btn-more-projects'
-                    defaultMessage='More projects'
-                />
-            </Link> */}
-            <div className='portafolio-btn'>
-                <Link to="/project">
-                    <ButtomGet/>
-                </Link>
-            </div>
-        </section>
+          )}
+        </div>
 
-    )
+        <div className="fav-projects__track" ref={trackRef}>
+          {projects.map((project) => (
+            <div className="fav-card" key={project.id}>
+              <div className="fav-card__img-wrapper">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="fav-card__img"
+                />
+              </div>
+
+              <div className="fav-card__top">
+                <h3 className="fav-card__title">{project.title}</h3>
+                <div className="fav-card__links">
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      <ExternalIcon />
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer">
+                      <GithubIcon />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <p className="fav-card__desc">{project.desc}</p>
+
+              <div className="fav-card__tags">
+                {project.tags.map((tag, i) => (
+                  <span className="fav-card__tag" key={i}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 };
-export default React.memo(Project);
+
+export default Project;
