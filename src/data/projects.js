@@ -6,7 +6,7 @@ const projects = [
     desc: "Cyber Park est une plateforme web de gestion des ressources humaines",
     img: cyberParkImg,
     tags: ["Angular", "NodeJs", "CSS", "Firebase"],
-    link: "",
+    link: "https://cyber-park-hr.vercel.app",
     github: "https://github.com/AbdelKarim-Ensi/Cyber-Park-Frontend"
   },
 
