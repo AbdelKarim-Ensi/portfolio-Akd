@@ -19,7 +19,7 @@ const projects = [
   img: techgear,
   tags: ["NestJS", "Angular", "PostgreSQL", "Stripe", "Docker", "Nginx"],
   link: "https://techgear-frontend.vercel.app",
-  github: "https://github.com/AbdelKarim-Ensi/E-Commerce-Frontend",
+  github: "https://github.com/AbdelKarim-Ensi/E-Commerce",
 },
 ];
 
