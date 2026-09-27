@@ -10,11 +10,11 @@
 
     "greeting": "Hello",
     "name": "I am Abdelkarim Doudey",
-    "rol": "Full-stack developer",
+    "rol": "DevOps Engineer & Full-stack developer",
 
     "im": "who I am",
-    "description": "My name is Abdel Karim Doudey and I am a full stack developer.",
-    "my-description": "I have been working on web designing and web development for 2 years. Constantly updating the technologies I already master, but also looking to learn new technologies to enrich my skills and improve my good practices as a developer.",
+    "description": "My name is Abdel Karim Doudey, I design and automate CI/CD pipelines and Kubernetes infrastructure.",
+    "my-description": "I build complete CI/CD chains and GitOps Kubernetes deployments (Terraform, Docker, GitHub Actions, Argo CD), backed by a solid full-stack background that lets me understand and optimize the whole chain, from code to production. I'm constantly learning DevOps and cloud practices to ship reliable, observable and automated systems.",
     "years": "Age: ",
     "from": "From: ",
     "btn-know-more": "Read more",
@@ -39,9 +39,9 @@
 
     "footer-info": "Page created by AbdelKarim",
 
-    "about-info-1": "Hi, I'm Abdel Karim Doudey, a first-year computer engineering student at ENSI; I consider myself a person passionate about programming and web development, always looking to build things from HTML, CSS and JavaScript up to full stack applications, and I still feel that same passion every time I create a web page.",
-    "about-info-2": "I consider myself a self-taught person since I like to be constantly learning day by day, both new technologies and new development methods that help me polish and raise my level of learning.",
-    "about-info-3": "I have had the opportunity to work on several personal and academic projects, which allowed me to improve my skills and knowledge, adapting to different needs and requirements; I have also had the opportunity to be part of courses that helped me enrich my skills and learn a little more about this beautiful world of web development.",
+    "about-info-1": "Hi, I'm Abdel Karim Doudey, a first-year computer engineering student at ENSI; I'm passionate about automation, containerized infrastructure and continuous delivery pipelines, and I build my DevOps skills through hands-on projects rather than theory alone.",
+    "about-info-2": "I consider myself a self-taught person: I learn by building, breaking and debugging Kubernetes clusters, CI/CD pipelines and infrastructure as code, following a phase-by-phase approach with strict validation criteria at each step.",
+    "about-info-3": "On my personal project AiOps, I built a complete chain: CI/CD with GitHub Actions, Docker containerization, Kubernetes orchestration, infrastructure as code with Terraform, and GitOps deployment with Argo CD (automated self-heal validated). My full-stack background (NestJS, Angular, PostgreSQL) means I understand the applications I deploy, not just the infrastructure carrying them.",
     "btn-cv": "Download CV",
     "about-skills-1": "More than a year of professional experience in this language, allows me to perform without problems in the industry.",
     "about-skills-2": "More than a year of work experience in this language, I use it daily to develop web designs and interfaces.",

@@ -4,6 +4,15 @@ import techgear from "../img/techgear.png";
 
 const projects = [
   {
+    id: 0,
+    title: "AiOps",
+    desc: "Projet DevOps personnel, phase-gaté : pipeline CI/CD complet (GitHub Actions), conteneurisation Docker, orchestration Kubernetes, infrastructure as code (Terraform) et déploiement GitOps avec Argo CD (self-heal automatique validé).",
+    img: cyberParkImg,
+    tags: ["Kubernetes", "Terraform", "Docker", "GitHub Actions", "Argo CD", "NestJS"],
+    
+    github: "https://github.com/AbdelKarim-Ensi/AiOps"
+  },
+  {
     id: 1,
     title: "Cyber Park",
     desc: "Cyber Park est une plateforme web de gestion des ressources humaines",

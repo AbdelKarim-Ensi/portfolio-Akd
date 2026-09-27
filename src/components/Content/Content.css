@@ -33,7 +33,11 @@
 }
 
 .wrapper {
-    margin: 2rem;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
 }
 .wrapper .button{
     display: flex;
@@ -41,8 +45,7 @@
     justify-content: flex-start;
     height: 60px;
     width: 60px;
-    float: left;
-    margin: 0 2rem;
+    margin: 0 1rem;
     overflow: hidden;
     color: #000;
     background: var(--green);

@@ -1,10 +1,8 @@
 import React from 'react';
 import '../../pages/About/AboutPage.css'
-import { Link } from 'react-router-dom';
 import cv from '../../cv/cv.pdf';
-import { ButtomGet } from '../ButtomGet/ButtomGet';
 
-/* Multi idioma */
+
 import { FormattedMessage } from 'react-intl';
 
 const About = () => (
@@ -83,63 +81,53 @@ const About = () => (
             </div>
             <div className="columns col-skill" data-aos="fade-left" data-aos-delay="650">
                 <h3>skills</h3>
-                <h4>Front-End</h4>
+                <h4>CI/CD & Conteneurs</h4>
                 <div className="skill">
                     <div>
-                        <img alt="HTML" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-
-                        <h5>HTML</h5>
+                        <img alt="Docker" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" title="Docker" />
+                        <h5>Docker</h5>
                     </div>
                     <div>
-<img alt="CSS" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                        <h5>CSS</h5>
+                        <img alt="Kubernetes" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" title="Kubernetes" />
+                        <h5>Kubernetes</h5>
                     </div>
                     <div>
-                        <img alt="Js" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-                        <h5>JavaScript</h5>
-                    </div>
-
-                    <div>
-                        <img alt="Bootstrap" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-                        <h5>Bootstrap</h5>
+                        <img alt="GitHub Actions" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" title="GitHub Actions" />
+                        <h5>GitHub Actions</h5>
                     </div>
                     <div>
-                        <img alt="Angular" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
-                        <h5>Angular</h5>
-                    </div>
-                    
-                    <div>
-                        <img alt="React" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                        <h5>React</h5>
-                    </div>
-                    <div>
-                        <img alt="Typescript" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-                        <h5>Typescript</h5>
+                        <img alt="Argo CD" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" title="Argo CD" />
+                        <h5>Argo CD</h5>
                     </div>
                 </div>
-                <h4>Back-End</h4>
+                <h4>Infrastructure & Cloud</h4>
                 <div className="skill">
                     <div>
-                        <img alt="Nodejs" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                        <h5>NodeJs</h5>
+                        <img alt="Terraform" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" title="Terraform" />
+                        <h5>Terraform</h5>
                     </div>
                     <div>
-                        <img alt="php" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
-                        <h5>PHP</h5>
-                    </div>
-                    
-                    <div>
-                        <img alt="mysql" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-                        <h5>MySQL</h5>
-                    </div>
-                    
-                    <div>
-                        <img alt="mongodb" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" />
-                        <h5>MongodDB</h5>
+                        <img alt="AWS" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" />
+                        <h5>AWS</h5>
                     </div>
                     <div>
-                        <img alt="express" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-                        <h5>Express</h5>
+                        <img alt="Linux" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" />
+                        <h5>Linux</h5>
+                    </div>
+                </div>
+                <h4>Monitoring & Automatisation</h4>
+                <div className="skill">
+                    <div>
+                        <img alt="Prometheus" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" title="Prometheus" />
+                        <h5>Prometheus</h5>
+                    </div>
+                    <div>
+                        <img alt="Grafana" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" title="Grafana" />
+                        <h5>Grafana</h5>
+                    </div>
+                    <div>
+                        <img alt="Ansible" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" title="Ansible" />
+                        <h5>Ansible</h5>
                     </div>
                 </div>
                 <h4>
@@ -150,25 +138,21 @@ const About = () => (
                 </h4>
                 <div className="skill">
                     <div>
-                        <img alt="figma" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title="figma" />
-                        <h5>Figma</h5>
-                    </div>
-                    <div>
-            <img alt="Firebase" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" title="Firebase" />
-            <h5>Firebase</h5>
-        </div>
-                            <div>
-    <img alt="Visual Studio Code" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" title="Visual Studio Code" />
-    <h5>VS Code</h5>
-</div>
-                    <div>
                         <img alt="git" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="git" />
                         <h5>Git</h5>
                     </div>
                     <div>
-    <img alt="Postman" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" title="Postman" />
-    <h5>Postman</h5>
-</div>
+                        <img alt="GitHub" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" />
+                        <h5>GitHub</h5>
+                    </div>
+                    <div>
+                        <img alt="NestJS" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" title="NestJS" />
+                        <h5>NestJS</h5>
+                    </div>
+                    <div>
+                        <img alt="Angular" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" title="Angular" />
+                        <h5>Angular</h5>
+                    </div>
                 </div>
             </div>
         </div>

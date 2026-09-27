@@ -6,9 +6,7 @@ export default function ParticleHeaderBg() {
     const particlesInit = async (main) => {
         console.log(main);
     
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
+  
         await loadFull(main);
       };
     
@@ -140,134 +138,149 @@ export default function ParticleHeaderBg() {
               star: {
                 sides: 5,
               },
-              image: [{
-  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-  width: 20,
-  height: 20,
-},
-{
-  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  width: 20,
-  height: 20,
-},
+              image: [
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg",
-                  width: 20,
-                  height: 20,
-                },
-               
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-      
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg",
                   width: 20,
                   height: 20,
                 },
-      
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+                  width: 20,
+                  height: 20,
+                },
               ],
               images: [
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg",
-                  width: 20,
-                  height: 20,
-                },
-               
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-               
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg",
                   width: 20,
                   height: 20,
                 },
                 {
-  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-  width: 20,
-  height: 20,
-},
-{
-  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  width: 20,
-  height: 20,
-},
-                
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+                  width: 20,
+                  height: 20,
+                },
               ],
             },
             type: "image",
