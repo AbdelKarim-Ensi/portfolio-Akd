@@ -36,7 +36,7 @@ Le site sera accessible sur [http://localhost:3000](http://localhost:3000).
 ## 📬 Contact
 
 - **Email** : abdelkarim.doudey@ensi-uma.tn
-- **LinkedIn** : [Abdel Karim Doudey](https://www.linkedin.com/in/abdel-karim-douday-552878280/)
+- **LinkedIn** : [Abdel Karim Doudey](https://www.linkedin.com/in/abdel-karim-doudey/)
 - **GitHub** : [AbdelKarim-Ensi](https://github.com/AbdelKarim-Ensi)
 
 ## 📄 Licence
